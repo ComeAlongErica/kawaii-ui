@@ -1,0 +1,20 @@
+{
+  "name": "kawaii-ui",
+  "version": "1.0.0",
+  "description": "a super cute design system",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook"
+  },
+  "author": "comealongerica",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@storybook/react": "^5.3.18",
+    "babel-loader": "^8.1.0"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

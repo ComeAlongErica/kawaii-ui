@@ -9,13 +9,13 @@ export const withText = () => {
   const buttonClick = () => console.log('clicked')
   return (
     <Button
-      styledComp={text('styledComp', 'width: 100%; height: 50px;')}
+      styledComp={text('styledComp', 'width: 150px; height: 45px;')}
       onClick={action('button-click')}
       loading={boolean('loading', false)}
       disabled={boolean('disabled', false)}
       variant={text('variant', 'Primary')}
     >
-      {text('children', 'Click Me!')}
+      {text('children', 'Click Me')}
     </Button>
   )
 }

@@ -20,9 +20,10 @@ const Button = ({
     <StyledButton
       className={className}
       onClick={() => onClick()}
-      loading={loading}
+      loader={loading}
       disabled={disabled}
       variant={variant}
+      styledComp={styledComp}
       {...otherProps}
     >
       {children}
@@ -32,9 +33,9 @@ const Button = ({
 Button.propTypes = {
   className: PropTypes.string,
   styledComp: PropTypes.string,
-  onClick: PropTypes.func.required,
+  onClick: PropTypes.func.isRequired,
   loading: PropTypes.bool,
-  children: PropTypes.node.required,
+  children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   variant: PropTypes.string
 }

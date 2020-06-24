@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import Loading from './Loading'
+
 const StyledButton = styled.button`
   box-sizing: border-box;
   padding: 0;
@@ -47,7 +49,8 @@ const Button = ({
       styledComp={styledComp}
       {...otherProps}
     >
-      {children}
+      {!loading && children}
+      {loading && <Loading />}
     </StyledButton>
   )
 }

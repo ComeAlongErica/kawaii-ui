@@ -19,13 +19,16 @@ const StyledButton = styled.button`
   font-weight: 400;
   color: white;
   -webkit-font-smoothing: antialiased;
-  background-color: #FF93C9;
+  background-color: ${props => (props.disabled ? 'lightgrey' : '#FF93C9')};
   border: 0px solid #9fdaec;
   border-radius: 8px;
   outline: none;
-  ${props => props.styledComp && props.styledComp} 
-  :active, :focus {
+  ${props => props.styledComp && props.styledComp};
+  :focus {
     border: 3px solid #9fdaec;
+  }
+  :hover {
+    cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   }
 `
 
@@ -43,7 +46,6 @@ const Button = ({
     <StyledButton
       className={className}
       onClick={() => onClick()}
-      loader={loading}
       disabled={disabled}
       variant={variant}
       styledComp={styledComp}

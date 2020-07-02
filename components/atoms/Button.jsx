@@ -12,26 +12,37 @@ const StyledButton = styled.button`
   justify-content: center;
   width: 100%;
   min-width: 180px;
-  transition: border 0.3s ease-in-out, background-color .1s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out,
+    border 0.2s ease-in-out;
   letter-spacing: 0.5px;
   font-size: 16px;
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-weight: 400;
-  color: white;
   -webkit-font-smoothing: antialiased;
-  background-color: ${props => (props.disabled ? 'lightgrey' : '#FF93C9')};
   border: 0px solid #9fdaec;
   border-radius: 8px;
-  outline: none;
   ${props => props.styledComp && props.styledComp};
-  :focus {
-    border: 3px solid #9fdaec;
-  }
+  outline: none;
   :active {
-    background-color: #f376b3;
+    transform: scale(1.05);
   }
   :hover {
     cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+  }
+`
+const Primary = styled(StyledButton)`
+  background-color: ${props => (props.disabled ? 'lightgrey' : '#FF93C9')};
+  color: white;
+  :focus {
+    background-color: #f376b3;
+  }
+`
+const Ghost = styled(StyledButton)`
+  background-color: ${props => (props.disabled ? '#f1f1f1' : 'transparent')};
+  color: ${props => (props.disabled ? 'darkgrey' : '#FF93C9')};
+  border: 1px solid;
+  :focus {
+    border: 3px solid #ff93c9;
   }
 `
 
@@ -45,8 +56,11 @@ const Button = ({
   variant,
   ...otherProps
 }) => {
+  const DisplayComp = props => {
+    return variant === 'primary' ? <Primary {...props} /> : <Ghost {...props} />
+  }
   return (
-    <StyledButton
+    <DisplayComp
       className={className}
       onClick={() => onClick()}
       disabled={disabled}
@@ -56,7 +70,7 @@ const Button = ({
     >
       {!loading && children}
       {loading && <Loading />}
-    </StyledButton>
+    </DisplayComp>
   )
 }
 Button.propTypes = {

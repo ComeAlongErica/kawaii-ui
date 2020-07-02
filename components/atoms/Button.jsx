@@ -64,12 +64,11 @@ const Button = ({
       className={className}
       onClick={() => onClick()}
       disabled={disabled}
-      variant={variant}
       styledComp={styledComp}
       {...otherProps}
     >
       {!loading && children}
-      {loading && <Loading />}
+      {loading && <Loading ghost={variant === 'ghost'} />}
     </DisplayComp>
   )
 }

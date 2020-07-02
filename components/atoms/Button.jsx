@@ -12,7 +12,7 @@ const StyledButton = styled.button`
   justify-content: center;
   width: 100%;
   min-width: 180px;
-  transition: 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out, background-color .1s ease-in-out;
   letter-spacing: 0.5px;
   font-size: 16px;
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
@@ -26,6 +26,9 @@ const StyledButton = styled.button`
   ${props => props.styledComp && props.styledComp};
   :focus {
     border: 3px solid #9fdaec;
+  }
+  :active {
+    background-color: #f376b3;
   }
   :hover {
     cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};

@@ -3,7 +3,7 @@ import { text, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import Button from '../../../components/atoms/Button'
 
-export default { title: 'Button' }
+export default { title: 'MDX/Button', component: Button }
 
 export const primaryButton = () => {
   const buttonClick = () => console.log('clicked')

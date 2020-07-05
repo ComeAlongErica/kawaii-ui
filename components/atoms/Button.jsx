@@ -85,7 +85,8 @@ Button.propTypes = {
 Button.defaultProps = {
   variant: 'primary',
   disabled: false,
-  loading: false
+  loading: false,
+  styledComp: 'width: 150px; height: 45px;'
 }
 
 export default Button

@@ -59,9 +59,9 @@ export const bold = () => {
   )
 }
 
-export const italics = () => {
+export const italic = () => {
   return (
-    <BodyTxt variants={['italics']}>
+    <BodyTxt variants={['italic']}>
       Magna ipsum pariatur laboris ex voluptate enim sit. Commodo dolore occaecat duis ea non aliqua proident aute. Adipisicing culpa incididunt enim commodo irure officia sint velit nostrud adipisicing. Id exercitation anim do sunt reprehenderit aliqua in quis pariatur enim exercitation proident tempor.
     </BodyTxt>
   )

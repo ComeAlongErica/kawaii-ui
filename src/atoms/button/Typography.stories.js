@@ -3,15 +3,7 @@ import BodyTxt from '../../../components/atoms/BodyTxt'
 
 export default { title: 'Typography/Body', component: BodyTxt }
 
-export const bold = () => {
-  return (
-    <BodyTxt>
-      Magna ipsum pariatur laboris ex voluptate enim sit. Commodo dolore occaecat duis ea non aliqua proident aute. Adipisicing culpa incididunt enim commodo irure officia sint velit nostrud adipisicing. Id exercitation anim do sunt reprehenderit aliqua in quis pariatur enim exercitation proident tempor.
-    </BodyTxt>
-  )
-}
-
-export const italics = () => {
+export const main = () => {
   return (
     <BodyTxt>
       Magna ipsum pariatur laboris ex voluptate enim sit. Commodo dolore occaecat duis ea non aliqua proident aute. Adipisicing culpa incididunt enim commodo irure officia sint velit nostrud adipisicing. Id exercitation anim do sunt reprehenderit aliqua in quis pariatur enim exercitation proident tempor.
@@ -21,7 +13,7 @@ export const italics = () => {
 
 export const extraSmall = () => {
   return (
-    <BodyTxt>
+    <BodyTxt variants={['xs']}>
       Magna ipsum pariatur laboris ex voluptate enim sit. Commodo dolore occaecat duis ea non aliqua proident aute. Adipisicing culpa incididunt enim commodo irure officia sint velit nostrud adipisicing. Id exercitation anim do sunt reprehenderit aliqua in quis pariatur enim exercitation proident tempor.
     </BodyTxt>
   )
@@ -29,7 +21,7 @@ export const extraSmall = () => {
 
 export const small = () => {
   return (
-    <BodyTxt>
+    <BodyTxt variants={['sm']}>
       Magna ipsum pariatur laboris ex voluptate enim sit. Commodo dolore occaecat duis ea non aliqua proident aute. Adipisicing culpa incididunt enim commodo irure officia sint velit nostrud adipisicing. Id exercitation anim do sunt reprehenderit aliqua in quis pariatur enim exercitation proident tempor.
     </BodyTxt>
   )
@@ -37,7 +29,7 @@ export const small = () => {
 
 export const medium = () => {
   return (
-    <BodyTxt>
+    <BodyTxt variants={['md']}>
       Magna ipsum pariatur laboris ex voluptate enim sit. Commodo dolore occaecat duis ea non aliqua proident aute. Adipisicing culpa incididunt enim commodo irure officia sint velit nostrud adipisicing. Id exercitation anim do sunt reprehenderit aliqua in quis pariatur enim exercitation proident tempor.
     </BodyTxt>
   )
@@ -45,7 +37,7 @@ export const medium = () => {
 
 export const large = () => {
   return (
-    <BodyTxt>
+    <BodyTxt variants={['lg']}>
       Magna ipsum pariatur laboris ex voluptate enim sit. Commodo dolore occaecat duis ea non aliqua proident aute. Adipisicing culpa incididunt enim commodo irure officia sint velit nostrud adipisicing. Id exercitation anim do sunt reprehenderit aliqua in quis pariatur enim exercitation proident tempor.
     </BodyTxt>
   )
@@ -53,7 +45,23 @@ export const large = () => {
 
 export const extraLarge = () => {
   return (
-    <BodyTxt>
+    <BodyTxt variants={['xl']}>
+      Magna ipsum pariatur laboris ex voluptate enim sit. Commodo dolore occaecat duis ea non aliqua proident aute. Adipisicing culpa incididunt enim commodo irure officia sint velit nostrud adipisicing. Id exercitation anim do sunt reprehenderit aliqua in quis pariatur enim exercitation proident tempor.
+    </BodyTxt>
+  )
+}
+
+export const bold = () => {
+  return (
+    <BodyTxt variants={['bold']}>
+      Magna ipsum pariatur laboris ex voluptate enim sit. Commodo dolore occaecat duis ea non aliqua proident aute. Adipisicing culpa incididunt enim commodo irure officia sint velit nostrud adipisicing. Id exercitation anim do sunt reprehenderit aliqua in quis pariatur enim exercitation proident tempor.
+    </BodyTxt>
+  )
+}
+
+export const italics = () => {
+  return (
+    <BodyTxt variants={['italics']}>
       Magna ipsum pariatur laboris ex voluptate enim sit. Commodo dolore occaecat duis ea non aliqua proident aute. Adipisicing culpa incididunt enim commodo irure officia sint velit nostrud adipisicing. Id exercitation anim do sunt reprehenderit aliqua in quis pariatur enim exercitation proident tempor.
     </BodyTxt>
   )

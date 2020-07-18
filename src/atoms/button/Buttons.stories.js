@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../../../components/atoms/Button'
 
-export default { title: 'MDX/Button', component: Button }
+export default { title: 'Buttons', component: Button }
 
 export const primaryButton = () => {
   const buttonClick = () => console.log('clicked')

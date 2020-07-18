@@ -16,7 +16,7 @@ const StyledButton = styled.button`
     border 0.2s ease-in-out;
   letter-spacing: 0.5px;
   font-size: 16px;
-  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   border: 0px solid #9fdaec;

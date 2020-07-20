@@ -1,7 +1,7 @@
 import React from 'react'
 import BodyTxt from '../../../components/atoms/BodyTxt'
 
-export default { title: 'Typography/Body', component: BodyTxt }
+export default { title: 'Typography/Body Text', component: BodyTxt }
 
 export const main = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../../components/atoms/Headers'
 
-export default { title: 'Typography/Header', component: Header }
+export default { title: 'Typography/Header Text', component: Header }
 
 export const pageTitle = () => {
   return (
@@ -54,14 +54,6 @@ export const headingFive = () => {
 export const headingSix = () => {
   return (
     <Header element={'h6'}>
-      The Quick Brown Fox Jumps Over the Lazy Dog
-    </Header>
-  )
-}
-
-export const headingSeven = () => {
-  return (
-    <Header element={'h7'}>
       The Quick Brown Fox Jumps Over the Lazy Dog
     </Header>
   )

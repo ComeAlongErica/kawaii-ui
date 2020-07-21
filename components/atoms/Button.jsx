@@ -13,7 +13,7 @@ const StyledButton = styled.button`
   width: 100%;
   min-width: 180px;
   transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out,
-    border 0.2s ease-in-out;
+    border 0.2s ease-in-out, color 0.3s ease-in-out;
   letter-spacing: 0.5px;
   font-size: 16px;
   font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
@@ -53,14 +53,18 @@ const Ghost = styled(StyledButton)`
 `
 
 const Text = styled(StyledButton)`
-  background-color: ${props => (props.disabled ? '#f1f1f1' : 'transparent')};
+  background-color: ${props => (props.disabled || props.isLoading) ? '#f1f1f1' : 'transparent'};
   color: ${props => (props.disabled ? 'darkgrey' : '#FF93C9')};
   width: auto;
   min-width: auto;
-  padding: 0 20px;
+  height: 38px;
+  padding: 0 2px;
+  font-weight: 700;
+  border-radius: 0;
+  border-bottom: 2px solid;
   :focus,
   :hover {
-    background-color: #f1f1f1;
+    color: #f376b3;
   }
 `
 
@@ -90,6 +94,7 @@ const Button = ({
       disabled={disabled}
       styledComp={styledComp}
       variant={variant}
+      isLoading={loading}
       {...otherProps}
     >
       {!loading && children}

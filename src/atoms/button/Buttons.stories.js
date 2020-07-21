@@ -1,9 +1,9 @@
 import React from 'react'
 import Button from '../../../components/atoms/Button'
 
-export default { title: 'Buttons & Links/Buttons', component: Button }
+export default { title: 'Buttons & Links/Buttons', component: Button}
 
-export const primaryButton = () => {
+export const primary= () => {
   const handleClick = () => console.log('clicked')
   return (
     <Button
@@ -14,7 +14,7 @@ export const primaryButton = () => {
   )
 }
 
-export const secondaryButton = () => {
+export const secondary= () => {
   const handleClick = () => console.log('clicked')
   return (
     <Button
@@ -26,7 +26,20 @@ export const secondaryButton = () => {
   )
 }
 
-export const disabledButton = () => {
+export const loading = () => {
+  const handleClick = () => console.log('clicked')
+  const isLoading = true
+  return (
+    <Button
+      loading={isLoading}
+      onClick={handleClick}
+    >
+      Click Me
+    </Button>
+  )
+}
+
+export const disabled= () => {
   const handleClick = () => console.log('clicked')
   const isDisabled = true
   return (
@@ -39,11 +52,25 @@ export const disabledButton = () => {
   )
 }
 
-export const ghostButton = () => {
+export const ghost= () => {
   const handleClick = () => console.log('clicked')
   return (
     <Button
       variant={'ghost'}
+      onClick={handleClick}
+    >
+      Click Me
+    </Button>
+  )
+}
+
+export const ghostLoading = () => {
+  const handleClick = () => console.log('clicked')
+  const isLoading = true
+  return (
+    <Button
+      variant={'ghost'}
+      loading={isLoading}
       onClick={handleClick}
     >
       Click Me

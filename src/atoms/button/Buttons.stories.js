@@ -83,10 +83,35 @@ export const ghostDisabled = () => {
   const isDisabled = true
   return (
     <Button
-      loading={false}
       variant={'ghost'}
       onClick={handleClick}
       disabled={isDisabled}
+    >
+      Click Me
+    </Button>
+  )
+}
+
+export const text = () => {
+  const handleClick = () => console.log('clicked')
+  return (
+    <Button
+      variant={'text'}
+      onClick={handleClick}
+    >
+      Click Me
+    </Button>
+  )
+}
+
+export const LoadingText = () => {
+  const handleClick = () => console.log('clicked')
+  const isLoading = true
+  return (
+    <Button
+      loading={isLoading}
+      variant={'text'}
+      onClick={handleClick}
     >
       Click Me
     </Button>

@@ -31,10 +31,16 @@ const StyledButton = styled.button`
   }
 `
 const Primary = styled(StyledButton)`
-  background-color: ${props => (props.disabled ? 'lightgrey' : props.variant === 'primary' ? '#FF93C9' : '#57b3e4')};
+  background-color: ${props =>
+    props.disabled
+      ? 'lightgrey'
+      : props.variant === 'primary'
+      ? '#FF93C9'
+      : '#57b3e4'};
   color: white;
   :focus {
-    background-color: ${props => props.variant === 'primary' ? '#f376b3' : '#2498d6'};
+    background-color: ${props =>
+      props.variant === 'primary' ? '#f376b3' : '#2498d6'};
   }
 `
 const Ghost = styled(StyledButton)`
@@ -43,6 +49,18 @@ const Ghost = styled(StyledButton)`
   border: 1px solid;
   :focus {
     border: 3px solid #ff93c9;
+  }
+`
+
+const Text = styled(StyledButton)`
+  background-color: ${props => (props.disabled ? '#f1f1f1' : 'transparent')};
+  color: ${props => (props.disabled ? 'darkgrey' : '#FF93C9')};
+  width: auto;
+  min-width: auto;
+  padding: 0 20px;
+  :focus,
+  :hover {
+    background-color: #f1f1f1;
   }
 `
 
@@ -57,7 +75,13 @@ const Button = ({
   ...otherProps
 }) => {
   const DisplayComp = props => {
-    return variant === 'primary' || variant === 'secondary' ? <Primary {...props} /> : <Ghost {...props} />
+    if (variant === 'primary' || variant === 'secondary') {
+      return <Primary {...props} />
+    } else if (variant === 'ghost') {
+      return <Ghost {...props} />
+    } else {
+      return <Text {...props} />
+    }
   }
   return (
     <DisplayComp

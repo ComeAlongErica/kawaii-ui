@@ -87,7 +87,7 @@ Header.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   element: PropTypes.string,
-  isPageTitle: PropTypes.bool
+  isPageTitle: PropTypes.bool,
 }
 
 Header.defaultProps = {

@@ -66,3 +66,11 @@ export const italic = () => {
     </BodyTxt>
   )
 }
+
+export const warning = () => {
+  return (
+    <BodyTxt variants={['xs', 'warn']}>
+      Magna ipsum pariatur laboris ex voluptate enim sit. Commodo dolore occaecat duis ea non aliqua proident aute. Adipisicing culpa incididunt enim commodo irure officia sint velit nostrud adipisicing. Id exercitation anim do sunt reprehenderit aliqua in quis pariatur enim exercitation proident tempor.
+    </BodyTxt>
+  )
+}

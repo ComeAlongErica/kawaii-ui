@@ -6,7 +6,7 @@ export default { title: 'Typography/Header Text', component: Header }
 export const pageTitle = () => {
   return (
     <Header element={'h1'} isPageTitle>
-      The Quick Brown Fox Jumps Over the Lazy Dog
+      The five boxing wizards jump quickly.
     </Header>
   )
 }
@@ -14,7 +14,7 @@ export const pageTitle = () => {
 export const headingOne = () => {
   return (
     <Header element={'h1'}>
-      The Quick Brown Fox Jumps Over the Lazy Dog
+      The five boxing wizards jump quickly.
     </Header>
   )
 }
@@ -22,7 +22,7 @@ export const headingOne = () => {
 export const headingTwo = () => {
   return (
     <Header element={'h2'}>
-      The Quick Brown Fox Jumps Over the Lazy Dog
+      The five boxing wizards jump quickly.
     </Header>
   )
 }
@@ -30,7 +30,7 @@ export const headingTwo = () => {
 export const headingThree = () => {
   return (
     <Header element={'h3'}>
-      The Quick Brown Fox Jumps Over the Lazy Dog
+      The five boxing wizards jump quickly.
     </Header>
   )
 }
@@ -38,7 +38,7 @@ export const headingThree = () => {
 export const headingFour = () => {
   return (
     <Header element={'h4'}>
-      The Quick Brown Fox Jumps Over the Lazy Dog
+      The five boxing wizards jump quickly.
     </Header>
   )
 }
@@ -46,7 +46,7 @@ export const headingFour = () => {
 export const headingFive = () => {
   return (
     <Header element={'h5'}>
-      The Quick Brown Fox Jumps Over the Lazy Dog
+      The five boxing wizards jump quickly.
     </Header>
   )
 }
@@ -54,7 +54,7 @@ export const headingFive = () => {
 export const headingSix = () => {
   return (
     <Header element={'h6'}>
-      The Quick Brown Fox Jumps Over the Lazy Dog
+      The five boxing wizards jump quickly.
     </Header>
   )
 }

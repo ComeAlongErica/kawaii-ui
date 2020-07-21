@@ -14,18 +14,9 @@ const HeaderOne = styled.h1`
   ${props =>
     props.isPageTitle &&
     `
-    position: relative;
     padding-left: 20px;
     font-size: 2.5rem;
-    ::after {
-      position: absolute;
-      content: '';
-      height: 100%;
-      width: 8px;
-      top: 0;
-      left: 0;
-      background-color: #57b3e4;
-    }
+    border-left: 10px solid #57b3e4
 `};
 `
 const HeaderTwo = styled.h2`

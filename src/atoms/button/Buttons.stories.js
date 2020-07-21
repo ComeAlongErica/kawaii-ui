@@ -7,7 +7,6 @@ export const primaryButton = () => {
   const handleClick = () => console.log('clicked')
   return (
     <Button
-      loading={false}
       onClick={handleClick}
     >
       Click Me
@@ -15,12 +14,23 @@ export const primaryButton = () => {
   )
 }
 
-export const primaryDisabled = () => {
+export const secondaryButton = () => {
+  const handleClick = () => console.log('clicked')
+  return (
+    <Button
+      variant={'secondary'}
+      onClick={handleClick}
+    >
+      Click Me
+    </Button>
+  )
+}
+
+export const disabledButton = () => {
   const handleClick = () => console.log('clicked')
   const isDisabled = true
   return (
     <Button
-      loading={false}
       onClick={handleClick}
       disabled={isDisabled}
     >
@@ -33,7 +43,6 @@ export const ghostButton = () => {
   const handleClick = () => console.log('clicked')
   return (
     <Button
-      loading={false}
       variant={'ghost'}
       onClick={handleClick}
     >

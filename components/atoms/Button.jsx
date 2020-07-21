@@ -31,10 +31,10 @@ const StyledButton = styled.button`
   }
 `
 const Primary = styled(StyledButton)`
-  background-color: ${props => (props.disabled ? 'lightgrey' : '#FF93C9')};
+  background-color: ${props => (props.disabled ? 'lightgrey' : props.variant === 'primary' ? '#FF93C9' : '#57b3e4')};
   color: white;
   :focus {
-    background-color: #f376b3;
+    background-color: ${props => props.variant === 'primary' ? '#f376b3' : '#2498d6'};
   }
 `
 const Ghost = styled(StyledButton)`
@@ -57,7 +57,7 @@ const Button = ({
   ...otherProps
 }) => {
   const DisplayComp = props => {
-    return variant === 'primary' ? <Primary {...props} /> : <Ghost {...props} />
+    return variant === 'primary' || variant === 'secondary' ? <Primary {...props} /> : <Ghost {...props} />
   }
   return (
     <DisplayComp
@@ -65,10 +65,11 @@ const Button = ({
       onClick={() => onClick()}
       disabled={disabled}
       styledComp={styledComp}
+      variant={variant}
       {...otherProps}
     >
       {!loading && children}
-      {loading && <Loading ghost={variant === 'ghost'} />}
+      {loading && <Loading variant={variant} />}
     </DisplayComp>
   )
 }

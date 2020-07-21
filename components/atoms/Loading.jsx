@@ -21,7 +21,7 @@ const Dot = styled.div`
   height: 10px;
   margin: 3px;
   border-radius: 15px;
-  background-color: ${props => props.ghost ? '#FF93C9' : 'white'};
+  background-color: ${props => props.variant === 'ghost' ? '#FF93C9' : 'white'};
   margin-top: 5px;
   &&.dot1 {
     animation: ${bouncing} 0.6s 0.1s linear infinite;
@@ -36,17 +36,17 @@ const Dot = styled.div`
 const Loading = props => {
   return (
     <>
-      <Dot className='dot1' ghost={props.ghost}></Dot>
-      <Dot className='dot2' ghost={props.ghost}></Dot>
-      <Dot className='dot3' ghost={props.ghost}></Dot>
+      <Dot className='dot1' variant={props.variant}></Dot>
+      <Dot className='dot2' variant={props.variant}></Dot>
+      <Dot className='dot3' variant={props.variant}></Dot>
     </>
   )
 }
 Loading.propTypes = {
-  ghost: PropTypes.bool,
+  variant: PropTypes.string,
 }
 
 Loading.defaultProps = {
-  ghost: false
+  variant: false
 }
 export default Loading
